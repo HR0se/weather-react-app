@@ -7,12 +7,14 @@ import "./Search.css";
 import "./Temperature.css";
 import "./WindSpeedHumidity.css";
 import "./CurrentLocation.css";
+import DevDetails from "./DevDetails";
 
 function App() {
   return (
     <div className="App">
       <CurrentWeather />
       <Search />
+      <DevDetails />
     </div>
   );
 }
