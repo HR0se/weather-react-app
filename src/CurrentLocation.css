@@ -1,0 +1,7 @@
+.CurrentLocation img {
+  width: 100px;
+  border: 1px solid #109648;
+  background: #fff;
+  border-radius: 4px;
+  float: right;
+}
