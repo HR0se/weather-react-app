@@ -12,9 +12,11 @@ import DevDetails from "./DevDetails";
 function App() {
   return (
     <div className="App">
-      <CurrentWeather />
-      <Search />
-      <DevDetails />
+      <div className="container">
+        <CurrentWeather />
+        <Search />
+        <DevDetails />
+      </div>
     </div>
   );
 }
