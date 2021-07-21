@@ -18,3 +18,36 @@ div.CurrentWeather {
   font-weight: 700;
   cursor: default;
 }
+
+.temperature span {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.temperature small {
+  font-size: 16px;
+  position: relative;
+  top: -12px;
+}
+
+.temperature .active {
+  font-weight: normal;
+}
+
+.temperature .active:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.windSpeedHumidity ul {
+  font-size: 14px;
+}
+
+.windSpeedHumidity li {
+  display: inline-block;
+  width: 170px;
+}
+
+.windSpeedHumidity span {
+  font-size: 36px;
+}
