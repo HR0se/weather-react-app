@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <CurrentWeather />
+        <CurrentWeather temperature={10} windSpeed={15} humidity={25} />
         <Search />
         <DevDetails />
       </div>

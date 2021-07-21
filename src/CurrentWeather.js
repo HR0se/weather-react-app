@@ -1,9 +1,8 @@
 import React from "react";
-import Temperature from "./Temperature.js";
 import WindSpeedHumidity from "./WindSpeedHumidity.js";
 import CurrentLocation from "./CurrentLocation.js";
 
-export default function CurrentWeather() {
+export default function CurrentWeather(props) {
   return (
     <div className="CurrentWeather">
       <ul>
@@ -12,7 +11,15 @@ export default function CurrentWeather() {
         </li>
         <li className="current-temperature">
           <div className="row">
-            <Temperature value={10} />
+            <div className="Temperature col-sm-7 col-lg-3">
+              <span id="current-temperature-value">{props.temperature}</span>
+              <small>
+                <a href="/">°C</a>|
+                <a href="/" className="active">
+                  °F
+                </a>
+              </small>
+            </div>
             <WindSpeedHumidity windSpeed={15} humidity={25} />
           </div>
         </li>
