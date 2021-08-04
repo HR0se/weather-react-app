@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function FormattedDate(props) {
-  console.log(props.date);
   let days = [
     "Sunday",
     "Monday",
@@ -24,7 +23,7 @@ export default function FormattedDate(props) {
   if (currentDate < 10) {
     currentDate = `0${currentDate}`;
   }
-  let month = props.date.getMonth();
+  let month = props.date.getMonth() + 1;
   if (month < 10) {
     month = `0${month}`;
   }
