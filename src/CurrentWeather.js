@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 
 export default function CurrentWeather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +12,7 @@ export default function CurrentWeather(props) {
       windSpeed: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
     console.log(response);
   }
@@ -28,6 +30,9 @@ export default function CurrentWeather(props) {
                 id="current-weather-icon"
               />
             </div>
+          </li>
+          <li>
+            <FormattedDate date={weatherData.date} />
           </li>
           <li className="current-temperature">
             <div className="row">
