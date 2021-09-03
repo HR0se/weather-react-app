@@ -1,8 +1,62 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import sun from "./images/01d.png";
+import moon from "./images/01n.png";
+import fewCloudsDay from "./images/02d.png";
+import fewCloudsNight from "./images/02n.png";
+import scatteredClouds from "./images/03d.png";
+import brokenClouds from "./images/04d.png";
+import showers from "./images/09d.png";
+import rainDay from "./images/10d.png";
+import rainNight from "./images/10n.png";
+import thunder from "./images/11d.png";
+import snow from "./images/13d.png";
+import fog from "./images/50d.png";
 
 export default function CurrentWeather(props) {
   if (props.data.ready) {
+    const codeMapping = {
+      "01d": 0,
+      "01n": 1,
+      "02d": 2,
+      "02n": 3,
+      "03d": 4,
+      "03n": 4,
+      "04d": 5,
+      "04n": 5,
+      "09d": 6,
+      "09n": 6,
+      "10d": 7,
+      "10n": 8,
+      "11d": 9,
+      "11n": 9,
+      "13d": 10,
+      "13n": 10,
+      "50d": 11,
+      "50n": 11,
+    };
+
+    const icons = [
+      { sun },
+      { moon },
+      { fewCloudsDay },
+      { fewCloudsNight },
+      { scatteredClouds },
+      { brokenClouds },
+      { showers },
+      { rainDay },
+      { rainNight },
+      { thunder },
+      { snow },
+      { fog },
+    ];
+
+    console.log(codeMapping[props.data.iconCode]);
+
+    console.log(icons[codeMapping[props.data.iconCode]]);
+
+    console.log({ sun });
+
     return (
       <div className="CurrentWeather">
         <ul>
@@ -10,8 +64,8 @@ export default function CurrentWeather(props) {
             <div className="currentLocation">
               <span id="current-location">{props.data.cityName}</span>
               <img
-                src=" http://openweathermap.org/img/wn/10d@2x.png"
-                alt="rain"
+                src={icons[codeMapping[props.data.iconCode]]}
+                alt={props.data.description}
                 id="current-weather-icon"
               />
             </div>

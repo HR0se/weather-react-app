@@ -23,6 +23,7 @@ export default function Search() {
   }
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -31,6 +32,7 @@ export default function Search() {
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
       cityName: response.data.name,
+      iconCode: response.data.weather[0].icon,
     });
   }
 
