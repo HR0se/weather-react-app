@@ -4,6 +4,8 @@ import "./CurrentWeather.css";
 import "./CurrentTemperature.css";
 import Search from "./Search.js";
 import "./Search.css";
+import Forecast from "./Forecast.js";
+import "./Forecast.css";
 import DevDetails from "./DevDetails";
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Search />
+        <Forecast />
         <DevDetails />
         <div>
           Icons made by{" "}

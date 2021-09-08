@@ -1,0 +1,32 @@
+div.Forecast {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+}
+
+.Forecast .ForecastDay {
+  border: 3px solid #109648;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.Forecast h3 {
+  font-size: 18px;
+  text-align: center;
+  padding: 4px;
+  margin: 0px;
+  font-weight: 500;
+}
+
+.Forecast img {
+  width: 100px;
+  display: block;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+.Forecast span {
+  display: block;
+  margin: 0px auto;
+}
