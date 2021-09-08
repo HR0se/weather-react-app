@@ -1,0 +1,32 @@
+.CurrentTemperature span {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.CurrentTemperature small {
+  font-size: 16px;
+  position: relative;
+  top: -12px;
+}
+
+.CurrentTemperature a {
+  color: #251605;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+}
+
+.CurrentTemperature a:hover {
+  color: #251605;
+  text-decoration: none;
+}
+
+.CurrentTemperature .active {
+  font-weight: normal;
+}
+
+.CurrentTemperature .active:hover {
+  text-decoration: underline;
+  color: #251605;
+  cursor: pointer;
+}

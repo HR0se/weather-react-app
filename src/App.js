@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import "./CurrentWeather.css";
+import "./CurrentTemperature.css";
 import Search from "./Search.js";
 import "./Search.css";
 import DevDetails from "./DevDetails";

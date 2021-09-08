@@ -38,15 +38,6 @@ div.CurrentWeather {
   top: -12px;
 }
 
-.temperature .active {
-  font-weight: normal;
-}
-
-.temperature .active:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .windSpeedHumidity ul {
   font-size: 14px;
 }

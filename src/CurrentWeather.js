@@ -1,4 +1,5 @@
 import React from "react";
+import CurrentTemperature from "./CurrentTemperature";
 import FormattedDate from "./FormattedDate";
 
 export default function CurrentWeather(props) {
@@ -39,10 +40,6 @@ export default function CurrentWeather(props) {
       "50d",
     ];
 
-    console.log(codeMapping[props.data.iconCode]);
-
-    console.log(icons[codeMapping[props.data.iconCode]]);
-
     return (
       <div className="CurrentWeather">
         <ul>
@@ -62,15 +59,7 @@ export default function CurrentWeather(props) {
           <li className="current-temperature">
             <div className="row">
               <div className="temperature col-sm-7 col-lg-3">
-                <span id="current-temperature-value">
-                  {Math.round(props.data.temperature)}
-                </span>
-                <small>
-                  <a href="/">°C</a>|
-                  <a href="/" className="active">
-                    °F
-                  </a>
-                </small>
+                <CurrentTemperature temp={props.data.temperature} />
               </div>
               <div className="windSpeedHumidity col-sm-5 col-lg-9">
                 <ul>
